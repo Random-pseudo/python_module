@@ -7,7 +7,7 @@ def read_file(filename: str) -> str:
     file: typing.IO = open(filename, 'r')
     print("---")
     content: str = file.read()
-    print(content, end='')
+    print(content)
     print("---")
     file.close()
     print(f"File '{filename}' closed.")
@@ -45,7 +45,7 @@ def main() -> None:
     print("\nTransform data:")
     new_content: str = transform_content(content)
     print("---")
-    print(new_content, end='')
+    print(new_content)
     print("---")
 
     dest: str = input("\nEnter new file name (or empty): ")

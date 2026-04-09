@@ -1,5 +1,5 @@
 import sys
-import typing
+import typing  # generic types for filelike objects
 
 
 def read_file(filename: str) -> None:
@@ -8,7 +8,7 @@ def read_file(filename: str) -> None:
     file: typing.IO = open(filename, 'r')
     print("---")
     content: str = file.read()
-    print(content, end='')
+    print(content)
     print("---")
     file.close()
     print(f"File '{filename}' closed.")

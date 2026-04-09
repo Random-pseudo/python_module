@@ -28,7 +28,7 @@ def main() -> None:
     print(secure_archive('/not/existing/file'))
 
     print("\nUsing 'secure_archive' to read from an inaccessible file:")
-    print(secure_archive('/etc/master.passwd'))
+    print(secure_archive('secret_file.txt'))
 
     print("\nUsing 'secure_archive' to read from a regular file:")
     result: tuple = secure_archive('ancient_fragment.txt')

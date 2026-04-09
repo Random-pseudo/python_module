@@ -7,7 +7,7 @@ def read_file(filename: str) -> str:
     file: typing.IO = open(filename, 'r')
     print("---")
     content: str = file.read()
-    print(content, end='')
+    print(content)
     print("---")
     file.close()
     print(f"File '{filename}' closed.")
@@ -30,7 +30,7 @@ def save_file(filename: str, content: str) -> None:
 
 def get_input(prompt: str) -> str:
     sys.stdout.write(prompt)
-    sys.stdout.flush()
+    sys.stdout.flush()  # Ensure prompt is printed before waiting for input
     return sys.stdin.readline().rstrip('\n')
 
 

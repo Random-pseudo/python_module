@@ -1,0 +1,31 @@
+# Environment files — NEVER commit real secrets!
+.env
+.env.local
+.env.production
+
+# Virtual environments
+matrix_env/
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Poetry lock (optional - include if you want reproducible builds)
+# poetry.lock
+
+# mypy cache
+.mypy_cache/
+
+# Output files
+matrix_analysis.png
