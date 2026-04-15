@@ -24,9 +24,15 @@ def spell_reducer(spells: list[int], operation: str) -> int:
 
 def partial_enchanter(base_enchantment: Callable) -> dict[str, Callable]:
     return {
-        'fire': functools.partial(base_enchantment, power=50, element='fire'),
-        'ice': functools.partial(base_enchantment, power=50, element='ice'),
-        'lightning': functools.partial(base_enchantment, power=50, element='lightning'),
+        'fire': functools.partial(
+            base_enchantment, power=50, element='fire'
+        ),
+        'ice': functools.partial(
+            base_enchantment, power=50, element='ice'
+        ),
+        'lightning': functools.partial(
+            base_enchantment, power=50, element='lightning'
+        ),
     }
 
 

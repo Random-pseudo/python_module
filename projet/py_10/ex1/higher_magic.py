@@ -53,7 +53,9 @@ if __name__ == "__main__":
     print(f"Original: {orig_power}, Amplified: {amp_power}")
 
     print("\nTesting conditional caster...")
-    is_powerful = lambda target, power: power >= 50
+
+    def is_powerful(target: str, power: int) -> bool:
+        return power >= 50
     conditional_fire = conditional_caster(is_powerful, fireball)
     print(conditional_fire("Orc", 60))
     print(conditional_fire("Orc", 20))

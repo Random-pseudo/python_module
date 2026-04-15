@@ -1,5 +1,4 @@
 import os
-import sys
 
 
 def load_dotenv_manually(env_file: str = '.env') -> None:
@@ -88,19 +87,7 @@ def security_check(config: dict[str, str]) -> None:
     else:
         print("  [INFO] No runtime env var overrides detected")
 
-    mode: str = config['MATRIX_MODE']
-    if mode == 'production':
-        print()
-        print("  [PRODUCTION MODE]")
-        print("  - Verbose logging disabled")
-        print("  - Debug endpoints closed")
-        print("  - Strict security policies enforced")
-    else:
-        print()
-        print("  [DEVELOPMENT MODE]")
-        print("  - Full DEBUG logging enabled")
-        print("  - Local database in use")
-        print("  - Relaxed security for testing")
+    config['MATRIX_MODE']
 
 
 def validate_config(config: dict[str, str]) -> list[str]:
